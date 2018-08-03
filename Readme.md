@@ -44,4 +44,4 @@ Comment utiliser:
 - Générer OS - Entité: Dans cette option, l'impression se basera sur les informations de l'entité avec le nom de l'entité, l'adresse, le téléphone, etc.
 - Générer OS - Client: Dans l'option client, l'impression laissera des informations sur l'utilisateur qui a ouvert l'appel.
 
-# (FR_FR)
+# FIN (FR_FR).
