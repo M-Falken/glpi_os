@@ -26,4 +26,3 @@ function plugin_os_uninstall(){
 	$DB->query($drop_config);
 	return true;
 }
-?>
