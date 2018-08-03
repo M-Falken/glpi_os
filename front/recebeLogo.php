@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Upload de arquivos</title>
+<title>Upload du Fichier</title>
 </head>
 
 <body>
@@ -11,10 +11,10 @@
 if(isset($_FILES['arquivo']['name']) && $_FILES["arquivo"]["error"] == 0)
 {
 
-	echo "Você enviou o arquivo: <strong>" . $_FILES['arquivo']['name'] . "</strong><br />";
-	echo "Este arquivo é do tipo: <strong>" . $_FILES['arquivo']['type'] . "</strong><br />";
-	echo "Temporáriamente foi salvo em: <strong>" . $_FILES['arquivo']['tmp_name'] . "</strong><br />";
-	echo "Seu tamanho é: <strong>" . $_FILES['arquivo']['size'] . "</strong> Bytes<br /><br />";
+	echo "Vous avez envoyé le fichier: <strong>" . $_FILES['arquivo']['name'] . "</strong><br />";
+	echo "Ce fichier est du type: <strong>" . $_FILES['arquivo']['type'] . "</strong><br />";
+	echo "Il a été temporairement sauvegardé dans le fichier: <strong>" . $_FILES['arquivo']['tmp_name'] . "</strong><br />";
+	echo "Sa taille est de: <strong>" . $_FILES['arquivo']['size'] . "</strong> Bytes<br /><br />";
 
 	$arquivo_tmp = $_FILES['arquivo']['tmp_name'];
 	$nome = $_FILES['arquivo']['name'];
@@ -26,19 +26,19 @@ if(isset($_FILES['arquivo']['name']) && $_FILES["arquivo"]["error"] == 0)
 		$destino = '../pics/' . $novoNome; 
 		if( @move_uploaded_file( $arquivo_tmp, $destino  ))
 		{
-			echo "Arquivo salvo com sucesso em : <strong>" . $destino . "</strong><br />";
+			echo "Fichier enregistré avec succès sur : <strong>" . $destino . "</strong><br />";
 			echo "<img src=\"" . $destino . "\" />";
-			echo '<br><p> <a href="#" class="vsubmit" onclick="history.back();"> Voltar </a>';
+			echo '<br><p> <a href="#" class="vsubmit" onclick="history.back();"> Retour </a>';
 		}
 		else
-			echo "Erro ao salvar o arquivo. Aparentemente você não tem permissão de escrita.<br />";
+			echo "Erreur lors de l'enregistrement du fichier. Apparemment, vous n'êtes pas autorisé à écrire.<br />";
 	}
 	else
-		echo "Você poderá enviar apenas arquivos \"*.jpg;*.jpeg;*.gif;*.png\"<br />";
+		echo "Vous ne pouvez uploader que des fichiers \"*.jpg;*.jpeg;*.gif;*.png\"<br />";
 }
 else
 {
-	echo "Você não enviou nenhum arquivo!";
+	echo "Vous n'avez uploadé aucun fichier!";
 	echo "<script language='javascript'>history.back()</script>";
 }
 ?>
