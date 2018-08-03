@@ -18,7 +18,7 @@ class PluginOsConfig extends CommonDBTM {
    
     $menu = array();
 
-      $menu['title']   = __('Ordem de Serviço','os');
+      $menu['title']   = __('Fiche Intervention','os');
       $menu['page']    = "/plugins/os/front/index.php";
       return $menu;
    }	
@@ -27,7 +27,7 @@ class PluginOsConfig extends CommonDBTM {
    function getTabNameForItem(CommonGLPI $item, $withtemplate = 0) {
       switch (get_class($item)) {
          case 'Ticket':
-            return array(1 => __('Ordem de Serviço','os'));
+            return array(1 => __('Fiche Intervention','os'));
          default:
             return '';
       }
@@ -61,7 +61,7 @@ class PluginOsConfig extends CommonDBTM {
       echo "<table class='tab_cadre_fixe' style='width:95%;'>\n";
       echo "<tr class='tab_bg_2'>\n";
       echo "<td colspan='4' class='center'>\n";
-      echo "<input type='submit' name='update' class='submit' value=\"" . __('Gerar OS - Entidade', 'os') . "\">\n";
+      echo "<input type='submit' name='update' class='submit' value=\"" . __('Fiche Intervention - Entité', 'os') . "\">\n";
       echo "</td></tr>\n";
       echo "</table></div>";
       Html::closeForm();
@@ -75,7 +75,7 @@ class PluginOsConfig extends CommonDBTM {
       echo "<table class='tab_cadre_fixe' style='width:95%;'>\n";
       echo "<tr class='tab_bg_2'>\n";
       echo "<td colspan='4' class='center'>\n";
-      echo "<input type='submit' name='update2' class='submit' value=\"" . __('Gerar OS - Cliente', 'os') . "\">\n";
+      echo "<input type='submit' name='update2' class='submit' value=\"" . __('Fiche Intervention - Client', 'os') . "\">\n";
       echo "</td></tr>\n";
       echo "</table></div>";
       Html::closeForm();
@@ -124,4 +124,3 @@ function plugin_os_check_config($verbose=false){
   }
   return true;
 }
-?>
